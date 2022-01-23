@@ -30,7 +30,10 @@ class LocalFeedLoader {
             guard let self = self else { return }
             
             if error == nil {
-                self.store.insert(items, timestamp: self.currentDate(), completion: completion)
+                self.store.insert(items, timestamp: self.currentDate()) { [weak self] error in
+                    guard self != nil else { return }
+                    completion(error)
+                }
             }
             else {
                 completion(error)
@@ -76,6 +79,19 @@ class CacheFeedUseCaseTests: XCTestCase {
         })
     }
     
+    func test_save_doesNotDeliverDeletionErrorAfterSUTInstanceHasBeenDeallocated() {
+        let store = FeedStoreSpy()
+        var sut: LocalFeedLoader? = LocalFeedLoader(store: store)
+        
+        var receivedResults = [Error?]()
+        sut?.save([uniqueItem()], completion: { receivedResults.append($0) })
+        
+        sut = nil
+        store.completeDeletion(with: anyNSError())
+        
+        XCTAssertTrue(receivedResults.isEmpty)
+    }
+    
     func test_save_requestsNewCacheInsertionWithTimestampOnSuccessfulCacheDeletion() {
         let timestamp = Date()
         let items = [uniqueItem(), uniqueItem()]
@@ -97,6 +113,20 @@ class CacheFeedUseCaseTests: XCTestCase {
         })
     }
     
+    func test_save_doesNotDeliverInsertionErrorAfterSUTInstanceHasBeenDeallocated() {
+        let store = FeedStoreSpy()
+        var sut: LocalFeedLoader? = LocalFeedLoader(store: store)
+        
+        var receivedResults = [Error?]()
+        sut?.save([uniqueItem()], completion: { receivedResults.append($0) })
+        
+        store.completeDeletionSuccessfully()
+        sut = nil
+        store.completeInsertion(with: anyNSError())
+        
+        XCTAssertTrue(receivedResults.isEmpty)
+    }
+    
     func test_save_succeedsOnSuccessfulCacheInsertion() {
         let (sut, store) = makeSUT()
         
@@ -104,19 +134,6 @@ class CacheFeedUseCaseTests: XCTestCase {
             store.completeDeletionSuccessfully()
             store.completeInsertionSuccessfully()
         })
-    }
-    
-    func test_save_doesNotDeliverDeletionErrorAfterSUTInstanceHasBeenDeallocated() {
-        let store = FeedStoreSpy()
-        var sut: LocalFeedLoader? = LocalFeedLoader(store: store)
-        
-        var receivedResults = [Error?]()
-        sut?.save([uniqueItem()], completion: { receivedResults.append($0) })
-        
-        sut = nil
-        store.completeDeletion(with: anyNSError())
-        
-        XCTAssertTrue(receivedResults.isEmpty)
     }
     
     // MARK: - Helpers
