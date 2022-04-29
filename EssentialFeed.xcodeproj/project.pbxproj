@@ -114,8 +114,8 @@
 			children = (
 				0A7165F9279EDB6100C41C10 /* Helpers */,
 				0A5450C7279DBE50000AC44B /* CacheFeedUseCaseTests.swift */,
-				0A7165FC279F022000C41C10 /* ValidateFeedCacheUseCaseTests.swift */,
 				0A7165F7279ED99A00C41C10 /* LoadFeedFromCacheUseCaseTests.swift */,
+				0A7165FC279F022000C41C10 /* ValidateFeedCacheUseCaseTests.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
