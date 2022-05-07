@@ -1,10 +1,3 @@
-//
-//  FeedCachePolicy.swift
-//  EssentialFeed
-//
-//  Created by Yonic Surny on 29/04/2022.
-//
-
 import Foundation
 
 internal final class FeedCachePolicy {

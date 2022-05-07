@@ -1,10 +1,3 @@
-//
-//  FeedItemsMapper.swift
-//  EssentialFeed
-//
-//  Created by Yonic Surny on 04/07/2021.
-//
-
 import Foundation
 
 internal final class FeedItemsMapper {

@@ -1,10 +1,3 @@
-//
-//  LocalFeedImage.swift
-//  EssentialFeed
-//
-//  Created by Yonic Surny on 24/01/2022.
-//
-
 import Foundation
 
 public struct LocalFeedImage: Equatable {

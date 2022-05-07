@@ -1,10 +1,3 @@
-//
-//  URLSessionHTTPClient.swift
-//  EssentialFeed
-//
-//  Created by Yonic Surny on 09/07/2021.
-//
-
 import Foundation
 
 public class URLSessionHTTPClient: HTTPClient {

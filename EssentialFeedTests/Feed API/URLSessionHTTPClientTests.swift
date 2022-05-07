@@ -1,10 +1,3 @@
-//
-//  URLSessionHTTPClientTests.swift
-//  EssentialFeedTests
-//
-//  Created by Yonic Surny on 04/07/2021.
-//
-
 import XCTest
 import EssentialFeed
 

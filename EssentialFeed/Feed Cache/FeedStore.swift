@@ -1,10 +1,3 @@
-//
-//  FeedStore.swift
-//  EssentialFeed
-//
-//  Created by Yonic Surny on 23/01/2022.
-//
-
 import Foundation
 
 public enum RetrievedCacheFeedResult {

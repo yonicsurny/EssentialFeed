@@ -1,10 +1,3 @@
-//
-//  CodableFeedStoreTests.swift
-//  EssentialFeedTests
-//
-//  Created by Yonic Surny on 05/05/2022.
-//
-
 import XCTest
 import EssentialFeed
 

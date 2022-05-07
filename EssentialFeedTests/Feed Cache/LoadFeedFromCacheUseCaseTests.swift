@@ -1,10 +1,3 @@
-//
-//  LoadFeedFromCacheUseCaseTests.swift
-//  EssentialFeedTests
-//
-//  Created by Yonic Surny on 24/01/2022.
-//
-
 import XCTest
 import EssentialFeed
 
