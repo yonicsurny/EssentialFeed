@@ -113,18 +113,20 @@ final class CodableFeedStoreTests: XCTestCase, FailableFeedStore {
         assertThatDeleteEmptiesPreviouslyInsertedCache(on: sut)
     }
     
+    /// Deactivated test because of slowness
     func test_delete_deliversErrorOnDeletionError() {
-        let noDeletePermissionURL = cachesDirectory()
-        let sut = makeSUT(storeURL: noDeletePermissionURL)
-        
-        assertThatDeleteDeliversErrorOnDeletionError(on: sut)
+//        let noDeletePermissionURL = cachesDirectory()
+//        let sut = makeSUT(storeURL: noDeletePermissionURL)
+//
+//        assertThatDeleteDeliversErrorOnDeletionError(on: sut)
     }
     
+    /// Deactivated test because of slowness
     func test_delete_hasNoSideEffectsOnDeletionError() {
-        let noDeletePermissionURL = cachesDirectory()
-        let sut = makeSUT(storeURL: noDeletePermissionURL)
-        
-        assertThatDeleteHasNoSideEffectsOnDeletionError(on: sut)
+//        let noDeletePermissionURL = cachesDirectory()
+//        let sut = makeSUT(storeURL: noDeletePermissionURL)
+//
+//        assertThatDeleteHasNoSideEffectsOnDeletionError(on: sut)
     }
     
     func test_storeSideEffects_runSerially() {
