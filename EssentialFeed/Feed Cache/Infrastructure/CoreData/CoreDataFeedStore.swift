@@ -26,7 +26,10 @@ public final class CoreDataFeedStore: FeedStore {
                 managedCache.timestamp = timestamp
                 managedCache.feed = ManagedFeedImage.images(from: feed, in: context)
                 try context.save()
-            })
+            }.mapError({ error in
+                context.rollback()
+                return error
+            }))
         }
     }
     
@@ -34,7 +37,10 @@ public final class CoreDataFeedStore: FeedStore {
         perform { context in
             completion(Result {
                 try ManagedCache.find(in: context).map(context.delete).map(context.save)
-            })
+            }.mapError({ error in
+                context.rollback()
+                return error
+            }))
         }
     }
     
