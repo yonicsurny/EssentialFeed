@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  testing:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: test
+        run: |
+          npm install
+          npm run server
+          xcodebuild clean build test -project EssentialFeed.xcodeproj -scheme "CI" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO SWIFT_TREAT_WARNINGS_AS_ERRORS=YES OTHER_SWIFT_FLAGS="-D ED_SKIP_SWIFT_FORMAT"
+          npm run killme
