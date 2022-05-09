@@ -1,8 +1,8 @@
-import Foundation
-
 //
 // Copyright © Aelptos. All rights reserved.
 //
+
+import Foundation
 
 public final class LocalFeedLoader {
 	private let store: FeedStore
