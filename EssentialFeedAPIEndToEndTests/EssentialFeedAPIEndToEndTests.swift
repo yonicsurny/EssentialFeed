@@ -5,7 +5,7 @@
 import XCTest
 import EssentialFeed
 
-/// Run the local server using `npm run start` from the _LocalServer_ folder
+/// Run the local server using `npm run server` from the root of the project directory
 
 class EssentialFeedAPIEndToEndTests: XCTestCase {
 	func test_endToEndServerGETFeedResult_matchesFixedTestAccountData() {
@@ -34,7 +34,7 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
 
 	private func getFeedResult(file: StaticString = #filePath, line: UInt = #line) -> FeedLoader.Result? {
 		let testServerURL = URL(string: "http://localhost:3000/test-api/feed")!
-		//        let testServerURL = URL(string: "https://essentialdeveloper.com/feed-case-study/test-api/feed")!
+		//let testServerURL = URL(string: "https://essentialdeveloper.com/feed-case-study/test-api/feed")!
 		let client = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
 		let loader = RemoteFeedLoader(url: testServerURL, client: client)
 		trackForMemoryLeaks(client, file: file, line: line)

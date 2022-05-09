@@ -2,10 +2,7 @@ os: osx
 osx_image: xcode13.2
 language: swift
 script: 
-  - cd LocalServer
   - npm install
-  - npm run start &
-  - cd ..
+  - npm run server &
   - xcodebuild clean build test -project EssentialFeed.xcodeproj -scheme "CI" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
-  - cd LocalServer
   - npm run killme
