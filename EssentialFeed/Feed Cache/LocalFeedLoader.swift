@@ -1,5 +1,9 @@
 import Foundation
 
+//
+// Copyright © Aelptos. All rights reserved.
+//
+
 public final class LocalFeedLoader {
 	private let store: FeedStore
 	private let currentDate: () -> Date

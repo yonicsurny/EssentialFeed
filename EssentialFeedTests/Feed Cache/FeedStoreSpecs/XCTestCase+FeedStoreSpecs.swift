@@ -107,6 +107,10 @@ extension FeedStoreSpecs where Self: XCTestCase {
 	}
 }
 
+//
+// Copyright © Aelptos. All rights reserved.
+//
+
 extension FeedStoreSpecs where Self: XCTestCase {
 	@discardableResult
 	func insert(_ cache: (feed: [LocalFeedImage], timestamp: Date), to sut: FeedStore, file: StaticString = #file, line: UInt = #line) -> Error? {

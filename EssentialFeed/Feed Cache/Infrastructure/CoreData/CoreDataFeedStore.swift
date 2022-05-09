@@ -1,3 +1,7 @@
+//
+// Copyright © Aelptos. All rights reserved.
+//
+
 import CoreData
 
 public final class CoreDataFeedStore: FeedStore {

@@ -1,3 +1,7 @@
+//
+// Copyright © Aelptos. All rights reserved.
+//
+
 import Foundation
 
 public typealias CachedFeed = (feed: [LocalFeedImage], timestamp: Date)

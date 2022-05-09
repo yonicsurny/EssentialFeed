@@ -1,6 +1,10 @@
 import CoreData
 
 @objc(ManagedCache)
+//
+// Copyright © Aelptos. All rights reserved.
+//
+
 class ManagedCache: NSManagedObject {
 	@NSManaged var timestamp: Date
 	@NSManaged var feed: NSOrderedSet
