@@ -75,9 +75,9 @@ class URLSessionHTTPClientTests: XCTestCase {
 		XCTAssertEqual(receivedValues?.response.url, response.url)
 		XCTAssertEqual(receivedValues?.response.statusCode, response.statusCode)
 	}
+}
 
-	// MARK: - Helpers
-
+private extension URLSessionHTTPClientTests {
 	private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> HTTPClient {
 		let sut = URLSessionHTTPClient()
 		trackForMemoryLeaks(sut, file: file, line: line)

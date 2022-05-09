@@ -79,7 +79,7 @@ class CoreDataFeedStoreTests: XCTestCase, FeedStoreSpecs {
 	}
 }
 
-extension CoreDataFeedStoreTests {
+private extension CoreDataFeedStoreTests {
 	private func makeSUT(file: StaticString = #file, line: UInt = #line) -> FeedStore {
 		let storeBundle = Bundle(for: CoreDataFeedStore.self)
 		let storeURL = URL(fileURLWithPath: "/dev/null")

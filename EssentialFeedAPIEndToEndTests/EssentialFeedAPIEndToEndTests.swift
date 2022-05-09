@@ -29,9 +29,9 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
 			XCTFail("Expected successful feed result, got no result instead")
 		}
 	}
+}
 
-	// MARK: - Helpers
-
+private extension EssentialFeedAPIEndToEndTests {
 	private func getFeedResult(file: StaticString = #filePath, line: UInt = #line) -> FeedLoader.Result? {
 		let testServerURL = URL(string: "http://localhost:3000/test-api/feed")!
 		//let testServerURL = URL(string: "https://essentialdeveloper.com/feed-case-study/test-api/feed")!
