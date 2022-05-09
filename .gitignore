@@ -112,5 +112,6 @@ iOSInjectionProject/
 
 # Project
 
+actions-runner/
 node_modules/
 package-lock.json
