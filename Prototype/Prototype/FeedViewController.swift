@@ -5,34 +5,34 @@
 import UIKit
 
 struct FeedImageViewModel {
-	let description: String?
-	let location: String?
-	let imageName: String
+    let description: String?
+    let location: String?
+    let imageName: String
 }
 
 final class FeedViewController: UITableViewController {
-	let feed = FeedImageViewModel.prototypeFeed
+    let feed = FeedImageViewModel.prototypeFeed
 
-	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		feed.count
-	}
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        feed.count
+    }
 
-	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "FeedImageCell", for: indexPath) as! FeedImageCell
-		let model = feed[indexPath.row]
-		cell.configure(with: model)
-		return cell
-	}
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedImageCell", for: indexPath) as! FeedImageCell
+        let model = feed[indexPath.row]
+        cell.configure(with: model)
+        return cell
+    }
 }
 
 extension FeedImageCell {
-	func configure(with model: FeedImageViewModel) {
-		locationLabel.text = model.location
-		locationContainer.isHidden = model.location == nil
+    func configure(with model: FeedImageViewModel) {
+        locationLabel.text = model.location
+        locationContainer.isHidden = model.location == nil
 
-		descriptionLabel.text = model.description
-		descriptionLabel.isHidden = model.description == nil
+        descriptionLabel.text = model.description
+        descriptionLabel.isHidden = model.description == nil
 
-		fadeIn(UIImage(named: model.imageName))
-	}
+        fadeIn(UIImage(named: model.imageName))
+    }
 }
