@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A26BED1282EBDF1002EFE15 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A26BEC9282EBDF1002EFE15 /* EssentialFeediOS.framework */; };
+		0A26BEDF282EC535002EFE15 /* FeedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A26BEDE282EC535002EFE15 /* FeedViewControllerTests.swift */; };
 		0A4EB833282785A90093F317 /* FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4EB832282785A90093F317 /* FeedStoreSpecs.swift */; };
 		0A4EB8352827869F0093F317 /* XCTestCase+FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4EB8342827869F0093F317 /* XCTestCase+FeedStoreSpecs.swift */; };
 		0A4EB83728278B530093F317 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4EB83628278B530093F317 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift */; };
@@ -85,6 +86,7 @@
 /* Begin PBXFileReference section */
 		0A26BEC9282EBDF1002EFE15 /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A26BED0282EBDF1002EFE15 /* EssentialFeediOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeediOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A26BEDE282EC535002EFE15 /* FeedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerTests.swift; sourceTree = "<group>"; };
 		0A4EB832282785A90093F317 /* FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpecs.swift; sourceTree = "<group>"; };
 		0A4EB8342827869F0093F317 /* XCTestCase+FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		0A4EB83628278B530093F317 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableRetrieveFeedStoreSpecs.swift"; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 		0A26BED4282EBDF1002EFE15 /* EssentialFeediOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				0A26BEDE282EC535002EFE15 /* FeedViewControllerTests.swift */,
 			);
 			path = EssentialFeediOSTests;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 					};
 					0A26BECF282EBDF1002EFE15 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 					0A4EB851282798220093F317 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -626,6 +630,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A26BEDF282EC535002EFE15 /* FeedViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -787,16 +792,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B9F9P95LAY;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aelptos.EssentialFeediOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -806,11 +818,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B9F9P95LAY;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aelptos.EssentialFeediOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
