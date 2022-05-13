@@ -15,5 +15,6 @@ jobs:
         run: |
           npm install
           npm run server &
-          xcodebuild clean build test -project EssentialFeed.xcodeproj -scheme "CI" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO SWIFT_TREAT_WARNINGS_AS_ERRORS=YES OTHER_SWIFT_FLAGS="-D ED_SKIP_SWIFT_FORMAT"
+          xcodebuild clean build test -project EssentialFeed.xcodeproj -scheme "CI_macOS" -sdk macosx -destination "platform=macOS" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO SWIFT_TREAT_WARNINGS_AS_ERRORS=YES OTHER_SWIFT_FLAGS="-D ED_SKIP_SWIFT_FORMAT" ONLY_ACTIVE_ARCH=YES
+          xcodebuild clean build test -project EssentialFeed.xcodeproj -scheme "CI_iOS" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.2,name=iPhone 12 Pro" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO SWIFT_TREAT_WARNINGS_AS_ERRORS=YES OTHER_SWIFT_FLAGS="-D ED_SKIP_SWIFT_FORMAT" ONLY_ACTIVE_ARCH=YES
           npm run killme
