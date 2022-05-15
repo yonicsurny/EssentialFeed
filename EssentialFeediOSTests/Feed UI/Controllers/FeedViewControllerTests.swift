@@ -232,7 +232,9 @@ final class FeedViewControllerTests: XCTestCase {
         sut.simulateFeedImageViewNotNearVisible(at: 1)
         XCTAssertEqual(loader.cancelledImageURLs, [image0.url, image1.url], "Expected second cancelled image URL request once second image is not near visible anymore")
     }
+}
 
+private extension FeedViewControllerTests {
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: FeedViewController, loader: LoaderSpy) {
         let loader = LoaderSpy()
         let sut = FeedViewController(feedLoader: loader, imageLoader: loader)
