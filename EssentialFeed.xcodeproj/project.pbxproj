@@ -418,8 +418,8 @@
 		0A6790122838FD82005D6FFB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0A6790132838FD97005D6FFB /* FeedViewModel.swift */,
 				0AE0FE0F2839033600374951 /* FeedImageViewModel.swift */,
+				0A6790132838FD97005D6FFB /* FeedViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
