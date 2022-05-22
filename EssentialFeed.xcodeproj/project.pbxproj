@@ -298,9 +298,9 @@
 		0A26BF00283106C8002EFE15 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0AE0FE1A283A3E5800374951 /* Feed.storyboard */,
 				0A26BEE9282ED753002EFE15 /* FeedImageCell.swift */,
 				0A26BEEB2830F93B002EFE15 /* UIView+Shimmering.swift */,
-				0AE0FE1A283A3E5800374951 /* Feed.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
