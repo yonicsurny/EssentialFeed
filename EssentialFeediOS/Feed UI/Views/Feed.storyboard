@@ -149,6 +149,9 @@ Location</string>
                             <action selector="refresh" destination="eRn-11-00C" eventType="valueChanged" id="P32-Ks-aBl"/>
                         </connections>
                     </refreshControl>
+                    <connections>
+                        <outlet property="errorView" destination="U7S-4P-Q0F" id="9Lj-BD-xFd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agk-Ri-hFV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
