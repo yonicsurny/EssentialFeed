@@ -24,6 +24,7 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmL-HC-95S">
                                     <rect key="frame" x="8" y="8" width="398" height="18"/>
                                     <viewLayoutGuide key="safeArea" id="WbF-Cs-WnB"/>
+                                    <gestureRecognizers/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -39,6 +40,7 @@
                             </constraints>
                             <connections>
                                 <outlet property="label" destination="DmL-HC-95S" id="W19-Ff-jp8"/>
+                                <outletCollection property="gestureRecognizers" destination="Uup-Ws-ika" appends="YES" id="pzE-Df-db7"/>
                             </connections>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="K2W-27-7l4">
@@ -174,6 +176,11 @@ Location</string>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agk-Ri-hFV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Uup-Ws-ika">
+                    <connections>
+                        <action selector="hideMessageAnimated" destination="U7S-4P-Q0F" id="YBj-CZ-9H2"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="768.11594202898561" y="61.607142857142854"/>
         </scene>
