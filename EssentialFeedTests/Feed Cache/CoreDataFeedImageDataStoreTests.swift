@@ -32,10 +32,6 @@ private extension CoreDataFeedImageDataStoreTests {
         return sut
     }
 
-    private func anyData() -> Data {
-        return Data("Any data".utf8)
-    }
-
     private func notFound() -> FeedImageDataStore.RetrievalResult {
         return .success(.none)
     }

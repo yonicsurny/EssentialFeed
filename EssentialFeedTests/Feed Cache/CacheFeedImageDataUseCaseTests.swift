@@ -62,10 +62,6 @@ private extension CacheFeedImageDataUseCaseTests {
         return (sut, store)
     }
 
-    private func anyData() -> Data {
-        return Data("Any data".utf8)
-    }
-
     private func failed() -> LocalFeedImageDataLoader.SaveResult {
         return .failure(LocalFeedImageDataLoader.SaveError.failed)
     }

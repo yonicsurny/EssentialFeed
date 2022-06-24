@@ -88,10 +88,6 @@ private extension URLSessionHTTPClientTests {
         return sut
     }
 
-    private func anyData() -> Data {
-        return Data("Any data".utf8)
-    }
-
     private func nonHTTPURLResponse() -> URLResponse {
         return URLResponse(url: anyURL(), mimeType: nil, expectedContentLength: 0, textEncodingName: nil)
     }
