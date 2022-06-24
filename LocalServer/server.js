@@ -12,6 +12,10 @@ app.get('/test-api/feed', (req, res) => {
   log("Sending response for " + req.url)
   res.sendFile(path.join(__dirname + '/Responses/feed.json'))
 })
+app.get('/test-api/feed/73A7F70C-75DA-4C2E-B5A3-EED40DC53AA6/image', (req, res) => {
+  log("Sending response for " + req.url)
+  res.sendFile(path.join(__dirname + '/Responses/image.png'))
+})
 app.all('*', (req, res) => {
   log("Resource not found for " + req.url)
   res.status(404).send('Not found')
