@@ -1,11 +1,10 @@
-//	
+//
 //  Copyright © Aelptos. All rights reserved.
 //
 
 import XCTest
 
 class EssentialAppUITestsLaunchTests: XCTestCase {
-
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }
