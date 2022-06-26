@@ -29,6 +29,7 @@
 		820C020628688C1A0046A566 /* FeedImageDataLoaderCacheDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820C020528688C1A0046A566 /* FeedImageDataLoaderCacheDecoratorTests.swift */; };
 		820C020828688C780046A566 /* FeedImageDataLoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820C020728688C780046A566 /* FeedImageDataLoaderSpy.swift */; };
 		820C020A28688D0F0046A566 /* XCTestCase+FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820C020928688D0F0046A566 /* XCTestCase+FeedImageDataLoader.swift */; };
+		820C020E28688ED10046A566 /* FeedImageDataLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820C020D28688ED10046A566 /* FeedImageDataLoaderCacheDecorator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		820C020528688C1A0046A566 /* FeedImageDataLoaderCacheDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderCacheDecoratorTests.swift; sourceTree = "<group>"; };
 		820C020728688C780046A566 /* FeedImageDataLoaderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderSpy.swift; sourceTree = "<group>"; };
 		820C020928688D0F0046A566 /* XCTestCase+FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedImageDataLoader.swift"; sourceTree = "<group>"; };
+		820C020D28688ED10046A566 /* FeedImageDataLoaderCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderCacheDecorator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				820C01B52865C5830046A566 /* AppDelegate.swift */,
+				820C020D28688ED10046A566 /* FeedImageDataLoaderCacheDecorator.swift */,
 				820C01F4286858500046A566 /* FeedImageDataLoaderWithFallbackComposite.swift */,
 				820C020328688A7F0046A566 /* FeedLoaderCacheDecorator.swift */,
 				820C01F0286854750046A566 /* FeedLoaderWithFallbackComposite.swift */,
@@ -299,6 +302,7 @@
 				820C01F5286858500046A566 /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */,
 				820C01B62865C5830046A566 /* AppDelegate.swift in Sources */,
 				820C01F1286854750046A566 /* FeedLoaderWithFallbackComposite.swift in Sources */,
+				820C020E28688ED10046A566 /* FeedImageDataLoaderCacheDecorator.swift in Sources */,
 				820C020428688A7F0046A566 /* FeedLoaderCacheDecorator.swift in Sources */,
 				820C01B82865C5830046A566 /* SceneDelegate.swift in Sources */,
 			);
